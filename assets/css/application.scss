@@ -1,0 +1,24 @@
+.content {
+  background-color: aliceblue;
+  padding: 4px;
+}
+
+h2 {
+    margin: 4px 0;
+}
+
+.kanban {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.fusen {
+  background-color: lightyellow;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 100px;
+  border: solid 1px yellow;
+}
