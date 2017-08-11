@@ -5,14 +5,14 @@ gem 'sinatra-contrib'
 gem 'sinatra-activerecord'
 gem 'thin'
 
+gem 'drb-websocket', github: 'youchan/drb-websocket'
+
 gem 'opal', github: 'youchan/opal', branch: 'marshal-dump-bignum'
 gem 'opal-sprockets', github: 'opal/opal-sprockets'
 gem 'menilite'
-gem 'hyalite', path: '../hyalite'
+gem 'hyalite'
 
-group :opal do
-  gem 'opal-drb'
-end
+gem 'opal-drb', github: 'youchan/opal-drb'
 
 gem 'rake'
 gem 'sass'
