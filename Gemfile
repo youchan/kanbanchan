@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-activerecord'
+gem 'sqlite3'
 gem 'thin'
 
 gem 'drb-websocket', github: 'youchan/drb-websocket'

@@ -5,7 +5,8 @@ require_relative 'app/models/remote/fusen'
 
 class RemoteManager
   def self.fusen_manager
-    DRbObject.new(Kanban::FusenManager.new)
+    @manager ||= Kanban::FusenManager.new
+    DRb::DRbObject.new(@manager)
   end
 end
 

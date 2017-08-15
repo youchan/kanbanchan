@@ -7,6 +7,8 @@ if development?
 end
 
 class Server < Sinatra::Base
+  register Sinatra::ActiveRecordExtension
+
   OPAL = Opal::Server.new do |server|
     server.append_path 'app'
     server.append_path 'assets'

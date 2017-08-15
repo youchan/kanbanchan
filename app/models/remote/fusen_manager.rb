@@ -1,14 +1,15 @@
 module Kanban
   class FusenManager
     def initialize
-      @collection = [
-        Kanban::Fusen.new('Fusen1', 100, 100),
-        Kanban::Fusen.new('Fusen2' , 150, 150)
-      ]
+      @remote = DRb::DRbObject.new(self)
     end
 
     def collection
-      @collection
+      ::Fusen.all.map{|f| Kanban::Fusen.new(@remote, f) }
+    end
+
+    def move(id, x, y)
+      ::Fusen.find(id).update!(x: x, y: y)
     end
   end
 end
