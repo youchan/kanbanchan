@@ -14,6 +14,7 @@ module Kanban
       @x = x
       @y = y
       @manager.move(id, x, y)
+      @manager.updated(self)
     end
   end
 end

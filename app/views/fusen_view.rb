@@ -7,7 +7,7 @@ module Kanban
         class: 'fusen',
         draggable: 'true',
         onClick: -> (event) { puts "## shift: #{event.shift_key}" },
-        onDragStart: -> (event) { event.data['fusen'] = "#{index},#{event.client.x},#{event.client.y}" },
+        onDragStart: -> (event) { event.data['fusen'] = "#{fusen.id},#{event.client.x},#{event.client.y}" },
         onDragEnd: -> (event) {  },
         style: { top: "#{fusen.y}px", left: "#{fusen.x}px" }
       }, fusen.title)
